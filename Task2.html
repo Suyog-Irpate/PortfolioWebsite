@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="t2style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a4cdd6b6d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="title">Portfolio</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Engineer</p>
+                <h1>Hi, I'm <span>Suyog Irpate</span> a Computer Science And Engineering Student</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------About Section--------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aboutphoto.jpg">
+                </div>
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> 
+                        I'm Suyog Irpate, a Computer Science and Engineering student at Government College of Engineering, Amravati. Passionate about tech and problem-solving, I'm focused on software development and enjoy hackathons and open-source projects. My goal is to innovate and contribute positively to the tech industry. Outside academics, I love building impactful projects.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"  onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Language Known </span><br>JAVA | C++ | HTML | SQL | JAVASCRIPT </li>
+                            <li><span>Development </span><br> Full Stack Web Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Internship </span><br>as Web Developer at Asteric Technologies</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech in CSE </span><br>from GCOEA </li>
+                            <li><span>10th & 12th </span><br> from SDVM</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------------Projects----------------------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <h2>Online Webinar Landing Page</h2>
+                    <p>The online webinar project aims to create an accessible, user-friendly platform for hosting informative sessions. It offers a diverse range of topics and encourages personalized learning experiences. This project enhances engagement and convenience for both presenters and attendees.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Billing Application</h2>
+                    <p>The billing system application automates the calculation and management of bills for services or products. It streamlines invoicing, tracks payments, and enhances financial efficiency for businesses. Users can easily generate, send, and manage invoices, improving the overall billing process.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Portfolio Website</h2>
+                    <p>A portfolio website is a digital showcase of an individual's or company's work, skills, and achievements. It serves as a professional online presence, allowing visitors to explore past projects, qualifications, and contact information. A well-designed portfolio website is crucial for presenting a compelling narrative and attracting potential clients or employers.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- -----------------------Contact Form-------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>yogspace3456@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>+91 9192939495</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/yog.irpate?mibextid=ZbWKwL"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/suyog-irpate-18003122b"><i class="fa-brands fa-linkedin"></i></i></a>
+                        <a href="https://github.com/Suyog-Irpate"><i class="fa-brands fa-square-github"></i></a>
+                    </div>
+                    <a href="MyResume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks ){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
